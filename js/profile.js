@@ -1,9 +1,21 @@
-import { ApolloClient, InMemoryCache, gql} from '@apollo/client';
-import Chart from './chart.js';
+function logout() {
+    localStorage.removeItem('jwt');
+    window.location.href = '/login.html';
+}
 
-// retrieve stored login credentials or token from localStorage or sessionStorage
-const token = localStorage.getItem('token');
+async function fetchData() {
+    const jwt = localStorage.getItem('jwt');
+    if (!jwt) {
+        window.location.href = '/login.html';
+    }
+    
+    
+}
 
+fetchData();
+
+
+/*
 // set up ApolloClient to send GraphQL queries
 const client = new ApolloClient({
     uri: 'https://01.gritlab.ax/intra/gritlab/api/graphql-engine/v1/graphql',
@@ -82,4 +94,4 @@ client.query({
     })
     .catch((error) => {
         console.log(error);
-    });
+    });*/
