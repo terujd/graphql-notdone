@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <script src="js/css.js"></script>
     <title>Profile Page</title>
-</head>
-<body>
-    <h1 User Identification</h1>
-        <p id="user-id">User ID: </p>
+  </head>
+  <body>
+    <script src="js/profile.js"></script>
+    <h1>GraphQL</h1>
+    <form id="profile-form">
+      <h2 id="ID">
+        <label> User Identification</label>
+        <p id="user-id">User ID:</p>
+      </h2>
 
-        <h1>XP Amount</h1>
-        <p id="xp-amount">XP: </p>
+      <h2 id="XP">
+        <label>XP Amount</label>
+        <p id="xp-amount">XP:</p>
+      </h2>
 
-        <h1>Grades</h1>
+      <h2 id="grades">
+        <label>Grades</label>
         <div id="grades-chart-container">
-            <canvas id="grades-chart"></canvas>
+          <svg id="grades-chart"></svg>
         </div>
-
-        <h1>Audits</h1>
+      </h2>
+      <h2 id="audits">
+        <label>Audits</label>
         <ul id="audits-list"></ul>
-
-        <h1>Skills</h1>
+      </h2>
+      <h2 id="skills">
+        <label>Skills</label>
         <ul id="skills-list"></ul>
-
-        <script src="https://cdn.jsdelivr.net/npm/apollo-client@3.5.8/lib/bundle.umd.js"></script>
-        <script src="js/profile.js"></script>
-</body>
+      </h2>
+    </form>
+    <button id="logout" onclick="logout()">logout</button>
+  </body>
 </html>
