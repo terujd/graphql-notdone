@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="css/login.css"> 
-    <script defer type="module" src="js/login.js">   </script>
-    <script defer type="module" src="js/css.js">   </script>
     <title>Login Page</title>
 </head>
 <body>
-    <center><h1>Login</h1></center>
-    <form>
+    <h1 id="color">Login</h1>
+    <form id="login-form">
        
         <div class="container">
-         
+       
             <label>Username : </label>
             <input type="text" placeholder="Enter Username" name="username" required>
             <label>Password : </label>
             <input type="password" placeholder="Enter Password" name="password" required>
                 <div id="login-error-msg-holder">
-        <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-      </div>
-            <button type="submit">Login</button>
-            <input type="checkbox" checked="checked"> Remember me
+                    <p id="login-error-msg"></p>
+                </div>
+     
+            <button id="login-button" type="submit">Login</button>
             <button type="button" class="cancelbtn">Cancel</button>
-            
+             
         </div>
     </form>
+    <script  src="js/login.js"></script>
+    <script  src="js/css.js"></script>
 </body>
 </html>
