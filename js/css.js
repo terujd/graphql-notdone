@@ -95,37 +95,38 @@ function applyRandomColor(elementId) {
 }*/
 
 
-// Function to generate a random RGB color
-function getRandomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
-// Function to apply a random color to an element
-function applyRandomColor(elementId) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    const color = getRandomColor();
-    element.style.backgroundColor = color;
+  // Function to generate a random RGB color
+  function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
   }
-}
 
-// Function to continuously change the color of a title
-function continuouslyChangeColor(elementId, intervalTime) {
-  setInterval(() => {
-    applyRandomColor(elementId);
-  }, intervalTime);
-}
-
-function appendTextToElement(textArray, targetElement) {
-  for (let i = 0; i < textArray.length; i++) {
-    const span = document.createElement("span");
-    span.textContent = textArray[i];
-    targetElement.appendChild(span);
-    applyRandomColor(span);
+  // Function to apply a random color to an element
+  function applyRandomColor(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const color = getRandomColor();
+      element.style.backgroundColor = color;
+    }
   }
-}
-export { appendTextToElement, getRandomColor };
-export { applyRandomColor, continuouslyChangeColor };
+
+  // Function to continuously change the color of a title
+  function continuouslyChangeColor(elementId, intervalTime) {
+    setInterval(() => {
+      applyRandomColor(elementId);
+      applyRandomColor(span)
+    }, intervalTime);
+  }
+
+  function appendTextToElement(textArray, targetElement) {
+    for (let i = 0; i < textArray.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = textArray[i];
+      targetElement.appendChild(span);
+      applyRandomColor(span);
+    }
+  }
+  // export { appendTextToElement, getRandomColor };
+  // export { applyRandomColor, continuouslyChangeColor };
