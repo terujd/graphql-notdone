@@ -1,53 +1,28 @@
-body {
+html {
   height: 100%;
-    font-family: Calibri, Helvetica, sans-serif;
-    background-color: rgb(88, 78, 80);
-    margin: 0;
+}
 
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: rgb(88, 78, 80);
+  display: block;
 }
 
 #profile-form {
     width: 100%;
     height: 100%;
-    background-color: rgb(221, 245, 253);
-}
-
-#ID {
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px 20px;
-    display: inline-block;
+    background-color: rgb(221, 245, 253, 0.6);
     border: 2px solid rgb(238, 102, 143);
-    box-sizing: border-box;
+    border-radius: 30px;
+    contain: content;
 }
 
-#XP {
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 2px solid rgb(238, 102, 143);
-    box-sizing: border-box;
-}
-
-#grades {
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 2px solid rgb(238, 102, 143);
-    box-sizing: border-box;
-}
-
-#audits {
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 2px solid rgb(238, 102, 143);
-    box-sizing: border-box;
-}
-
+#ID,
+#XP,
+#grades,
+#audits,
 #skills {
     width: 100%;
     margin: 8px 0;
@@ -55,7 +30,90 @@ body {
     display: inline-block;
     border: 2px solid rgb(238, 102, 143);
     box-sizing: border-box;
+    border-radius: 30px;
+    align-items: center;
 }
+
+#xpGraph,
+#upXpValue,
+#xpRatio,
+#total-xp,
+#downXpValue,
+#downXp {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid rgb(238, 102, 143);
+    box-sizing: border-box;
+    border-radius: 20% 20% 20% 20%;
+}
+
+
+
+#graphContainer {
+  width: 400px;
+  height: 300px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+/* option,
+#menu {
+  align-self: start;
+  color: #000;
+  background-color: #fff;
+  border:rgb(238, 102, 143);
+  border-radius: 30px;
+  margin: 10px 10px;
+  overflow: hidden;
+} */
+
+.bar {
+  background-color: blue;
+  height: 50px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+#bar1 {
+  background-color: #4CAF50;
+}
+
+#bar2 {
+  background-color: #2196F3;
+}
+
+#bar3 {
+  background-color: #00bcd4;
+}
+
+#bar4 {
+  background-color: #ff9800;
+}
+
+#bar5 {
+  background-color: #f44336;
+}
+
+
+/* Styles for the line chart */
+.line {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+/* Styles for the pie chart */
+.pie {
+  fill: orange;
+}
+
+/* Styles for the scatter plot */
+.scatter {
+  fill: green;
+}
+
+
 
 #logout {
     background-color: #9e788c;

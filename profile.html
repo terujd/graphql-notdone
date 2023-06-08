@@ -9,36 +9,53 @@
     <title>Profile Page</title>
   </head>
   <body>
-    
     <h1 id="myElement">GraphQL</h1>
     <form id="profile-form">
       <h2 id="ID">
         <label> User Identification</label>
+        <img class="user-image" src="" alt="User Image" />
         <p id="user-id">User ID:</p>
+        <p id="name-profile"></p>
+        <p id="phone"></p>
+        <p id="email"></p>
+        <p id="first-name-last-name"></p>
+        <p id="campus"></p>
+        <p id="from"></p>
       </h2>
-
       <h2 id="XP">
         <label>XP Amount</label>
-        <p id="xp-amount">XP:</p>
+        <p id="total-xp">Total XP:</p>
+        <p id="xpRatio">Audit Ratio:</p>
+        <p id="upXpValue">Up XP:</p>
+        <p id="downXpValue">Down XP:</p>
+        <svg id="xpGraph" width="100%" height="50">
+          <rect id="upXp" width="0%" height="100%"></rect>
+          <rect id="downXp" width="0%" height="100%"></rect>
+        </svg>
       </h2>
-
-      <h2 id="grades">
-        <label>Grades</label>
-        <div id="grades-chart-container">
-          <svg id="grades-chart"></svg>
-        </div>
-      </h2>
+      
       <h2 id="audits">
         <label>Audits</label>
         <ul id="audits-list"></ul>
       </h2>
+      
       <h2 id="skills">
         <label>Skills</label>
         <ul id="skills-list"></ul>
       </h2>
+      
+      <div id="graphContainer">
+        <svg id="graph"></svg>
+      </div>
+      <select id="menu">
+        <option value="xpAmount">XP Amount</option>
+        <option value="grades">Grades</option>
+        <option value="audits">Audits</option>
+        <option value="skills">Skills</option>
+      </select>
     </form>
     <button id="logout" onclick="logout()">logout</button>
-    
+
     <script src="js/profile.js"></script>
   </body>
 </html>
